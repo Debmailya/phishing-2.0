@@ -1,0 +1,160 @@
+:root {
+  --bg: #061120;
+  --card: #0d1d35;
+  --card-border: #1d365f;
+  --text: #e8f0ff;
+  --muted: #9eb3d4;
+  --accent: #00d5ff;
+  --accent-dark: #0096b5;
+  --danger: #ff6262;
+  --warning: #ffaf39;
+  --safe: #58da83;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(circle at top right, #0c2b5f, var(--bg) 55%);
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.site-header,
+.site-footer {
+  width: min(1080px, 92%);
+  margin: 0 auto;
+}
+
+.site-header {
+  padding: 2.5rem 0 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-dot {
+  width: 0.9rem;
+  height: 0.9rem;
+  border-radius: 100%;
+  background: linear-gradient(135deg, var(--accent), #59fff2);
+  box-shadow: 0 0 16px var(--accent);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+.tagline,
+.muted,
+.status,
+.site-footer {
+  color: var(--muted);
+}
+
+.container {
+  width: min(1080px, 92%);
+  margin: 0 auto;
+  display: grid;
+  gap: 1.4rem;
+}
+
+.card {
+  background: linear-gradient(180deg, rgb(16 34 60 / 95%), rgb(10 23 43 / 95%));
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 1.4rem;
+  backdrop-filter: blur(6px);
+}
+
+.label {
+  display: inline-block;
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+}
+
+.input-group {
+  display: flex;
+  gap: 0.75rem;
+}
+
+input {
+  flex: 1;
+  background: #041022;
+  border: 1px solid #2a4875;
+  color: var(--text);
+  padding: 0.85rem 0.95rem;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+button {
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: #001420;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  padding: 0.85rem 1rem;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  margin: 0.8rem 0 1rem;
+}
+
+.prediction {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.pill {
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 0.4rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.result-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  padding-left: 1.2rem;
+  margin: 0.6rem 0;
+}
+
+li + li {
+  margin-top: 0.45rem;
+}
+
+.site-footer {
+  padding: 1.2rem 0 2rem;
+  margin-top: auto;
+}
+
+@media (max-width: 640px) {
+  .input-group {
+    flex-direction: column;
+  }
+}

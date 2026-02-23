@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://phishguard-ai.example.com/sitemap.xml
