@@ -1,0 +1,7 @@
+url_length,dot_count,has_ip,domain_age_days,ssl_valid,suspicious_keywords,homograph_score,label
+62,3,0,1000,1,0,0,0
+88,5,0,4,0,1,1,1
+120,6,1,2,0,1,2,1
+45,2,0,780,1,0,0,0
+91,4,0,20,0,1,1,1
+55,2,0,600,1,0,0,0
