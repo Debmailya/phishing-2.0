@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PhishGuard AI | Real-Time Phishing Detection Platform</title>
+    <meta
+      name="description"
+      content="PhishGuard AI scans URLs in real time to detect phishing attacks, provide confidence scores, explainable risk factors, and actionable threat intelligence."
+    />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="PhishGuard AI" />
+    <meta
+      property="og:description"
+      content="Enterprise-grade phishing URL analysis with explainable AI signals and threat scoring."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://phishguard-ai.example.com" />
+    <link rel="canonical" href="https://phishguard-ai.example.com" />
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <h1>PhishGuard AI</h1>
+      </div>
+      <p class="tagline">AI-powered phishing intelligence for modern organizations</p>
+    </header>
+
+    <main class="container">
+      <section class="card scanner-card">
+        <h2>Scan a URL</h2>
+        <p class="muted">Instant phishing risk prediction, confidence score, and explainable indicators.</p>
+
+        <form id="scan-form" novalidate>
+          <label for="url" class="label">Website URL</label>
+          <div class="input-group">
+            <input
+              type="text"
+              id="url"
+              name="url"
+              placeholder="e.g. https://secure-account-login.example.com"
+              autocomplete="off"
+              required
+            />
+            <button type="submit" id="scan-btn">Analyze</button>
+          </div>
+          <p id="status" class="status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="card result-card" id="result-card" hidden>
+        <div class="result-top">
+          <h2>Analysis Report</h2>
+          <span class="pill" id="threat-pill">Threat Level</span>
+        </div>
+
+        <div class="grid">
+          <article>
+            <h3>Prediction</h3>
+            <p class="prediction" id="prediction"></p>
+          </article>
+          <article>
+            <h3>Confidence</h3>
+            <div class="confidence-wrap">
+              <p id="confidence-phishing"></p>
+              <p id="confidence-legitimate"></p>
+            </div>
+          </article>
+          <article>
+            <h3>Scanned Domain</h3>
+            <p id="domain"></p>
+          </article>
+          <article>
+            <h3>Analyzed At</h3>
+            <p id="analyzed-at"></p>
+          </article>
+        </div>
+
+        <div>
+          <h3>Why this was flagged</h3>
+          <ul id="reasons"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© <span id="year"></span> PhishGuard AI · Security-first URL intelligence platform.</p>
+    </footer>
+
+    <script src="/app.js" defer></script>
+  </body>
+</html>

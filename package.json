@@ -1,0 +1,20 @@
+{
+  "name": "phishguard-ai",
+  "version": "1.0.0",
+  "description": "Production-ready phishing detection SaaS demo",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "node --watch src/server.js",
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "express-rate-limit": "^7.4.0",
+    "helmet": "^8.0.0"
+  }
+}
